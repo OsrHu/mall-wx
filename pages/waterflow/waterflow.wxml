@@ -1,0 +1,2 @@
+<!--pages/waterflow/waterflow.wxml-->
+<l-water-flow generic:l-water-flow-item="l-demo" column-gap="20rpx"/>
