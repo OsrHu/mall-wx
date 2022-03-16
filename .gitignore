@@ -6,3 +6,4 @@ node_modules
 # 避免提交的文件
 yarn.lock
 yarn-error.lock
+config.js
