@@ -1,16 +1,24 @@
 const {Theme} = require("../../model/theme");
+const {Banner} = require("../../model/banner");
 
 Page({
 
 
   data: {
-    topTheme:null,
+    themeA:null,
+    themeB:null,
   },
 
-  onLoad: async function (options) {
-    const data = await Theme.getHomeLocationA()
+  async onLoad(options) {
+    this.initAllData()
+  },
+
+  async initAllData() {
+    const themeA = await Theme.getHomeLocationA()
+    const bannerB = await Banner.getHomeLocationB()
     this.setData({
-      topTheme:data[0]
+      themeA:themeA[0],
+      bannerB:bannerB[0]
     })
 
   },
